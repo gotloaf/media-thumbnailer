@@ -1,0 +1,21 @@
+[project]
+name = "media-thumbnailer"
+version = "1.0.0"
+description = "Creates a grid of thumbnails for a media file."
+authors = [
+    {name = "gotloaf", email = "gotloaf@users.noreply.github.com"}
+]
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.1",
+]
+
+[project.scripts]
+media_thumbnailer = "media_thumbnailer.__main__:main"
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "media_thumbnailer"
