@@ -7,7 +7,8 @@ authors = [
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "click>=8.1",
+    "click >= 8.1",
+    "Pillow >= 11.0",
 ]
 
 [project.scripts]
