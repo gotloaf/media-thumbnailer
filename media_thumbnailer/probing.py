@@ -98,8 +98,23 @@ def check_video_info(
 
 def extract_video_frame(
     path: pathlib.Path,
-    time: str
+    time: float
 ):
+    """
+    Pulls out a single video frame from an input video at the given timestamp.
+
+    Parameters
+    ----------
+    path: pathlib.Path
+        Path to the video file to get the frame from.
+    time: float
+        The time in seconds, from which to extract the frame.
+
+    Returns
+    -------
+    bytes
+        A byte string containing the frame encoded as PNG data.
+    """
 
     ffmpeg_output = subprocess.check_output(
         ('ffmpeg', '-hide_banner', '-loglevel', 'error', '-ss', f"{time:.2f}", '-i', str(path), '-vframes', '1', '-c:v', 'png', '-f', 'image2pipe', '-'),
