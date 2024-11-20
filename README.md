@@ -29,6 +29,39 @@ cd media-thumbnailer
 pip install -U -e .
 ```
 
+## Usage
+
+You can use the utility like so:
+```bash
+media_thumbnailer video.mp4 --output grid.png
+```
+
+There are more arguments available:
+
+> #### `--output`
+> Location of the file to output to, as PNG. You can pass `-` to have the image sent to stdout instead.
+>
+> #### `--include-info`/`--exclude-info`
+> Whether to include the media summary text at the top or not. Defaults to including it.
+>
+> #### `--include-head`/`--exclude-head`
+> Whether to include the first frame of the video in the grid. Defaults to including it.
+>
+> #### `--include-tail`/`--exclude-tail`
+> Whether to include the last frame of the video in the grid. Defaults to excluding it.
+>
+> #### `--column-count`
+> How many columns to include in the grid. The number of thumbnails is calculated automatically based on the row and column count.
+>
+> #### `--row-count`
+> How many rows to include in the grid. The number of thumbnails is calculated automatically based on the row and column count.
+>
+> #### `--padding`
+> Padding in pixels around the video frames and summary text.
+>
+> #### `--font-size`
+> Font size in pixels to use for the summary and timestamp text.
+
 ## Acknowledgements
 
 To guarantee consistent font rendering, `media-thumbnailer` includes a copy of [Iosevka Extended Extrabold](https://fontlibrary.org/en/font/iosevka-extended), which is licensed under the OFL (SIL Open Font License).
