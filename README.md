@@ -27,3 +27,7 @@ git clone https://github.com/gotloaf/media-thumbnailer.git
 cd media-thumbnailer
 pip install -U -e .
 ```
+
+## Acknowledgements
+
+To guarantee consistent font rendering, `media-thumbnailer` includes a copy of [Iosevka Extended Extrabold](https://fontlibrary.org/en/font/iosevka-extended), which is licensed under the OFL (SIL Open Font License).

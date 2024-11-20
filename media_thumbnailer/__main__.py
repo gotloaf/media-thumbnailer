@@ -17,6 +17,9 @@ from .formatting import format_duration, format_video_info
 from .probing import check_video_info, extract_video_frame
 
 
+ROOT = pathlib.Path(__file__).parent
+
+
 @click.command()
 @click.argument('filename', type=click.Path(exists=True, dir_okay=False))
 @click.option('--output', '-o', type=click.File('wb'))
@@ -50,13 +53,13 @@ def main(
     video_info = check_video_info(filename)
     summary = format_video_info(filename, video_info)
 
-    font = ImageFont.truetype('arial.ttf', font_size, encoding='unic')
+    font = ImageFont.truetype(str(ROOT / 'resources' / 'iosevka-extended-extrabold.ttf'), font_size, encoding='unic')
 
     width = padding + ((video_info.width + padding) * column_count)
     line_count = len(summary.split('\n'))
 
     if include_info:
-        top_of_contact_print = padding + (font_size * line_count) + padding
+        top_of_contact_print = int(padding + ((font_size * 1.2) * line_count) + padding)
     else:
         top_of_contact_print = padding
 
