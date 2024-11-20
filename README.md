@@ -2,6 +2,7 @@
 
 `media-thumbnailer` is a CLI tool that produces a grid of thumbnails for a media file in a similar manner to a [contact print](https://en.wikipedia.org/wiki/Contact_print).
 
+![Demo of a thumbnail grid image](.github/artefacts/demo.png)
 
 ## Prerequisites
 
