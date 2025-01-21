@@ -2,6 +2,7 @@
 name = "media-thumbnailer"
 version = "1.0.0"
 description = "Creates a grid of thumbnails for a media file."
+readme = "README.md"
 authors = [
     {name = "gotloaf", email = "gotloaf@users.noreply.github.com"}
 ]
